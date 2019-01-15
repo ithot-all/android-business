@@ -1,2 +1,2 @@
 # android-transmit
-:fire: A series of Android application layer transport protocols
+:fire: A series of Android business type libraries
