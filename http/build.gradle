@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = "dtboy"
+    groupId = "org.ithot.android.business.transmit.http"
+    artifactId = "http"
+    publishVersion = "0.0.1"
+    desc = "android http lib with cache policy"
+    website = "https://github.com/ithot-all/android-business.git"
+}
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "0.0.1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation 'com.jakewharton:disklrucache:2.0.2'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'org.ithot.android.serializer:inter:1.0.0'
+}
