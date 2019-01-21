@@ -37,9 +37,7 @@ public abstract class Res<T> implements IHTTPResult {
 
     @Override
     public void disconnected(Req req) {
-        if (Req.hook() != null) {
-            Req.hook().disconnected(req);
-        }
+        Req.hook().disconnected(req);
     }
 
     @Override
