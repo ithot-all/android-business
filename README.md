@@ -26,3 +26,32 @@ Req.create(this)
         }
     }).get();
 ```
+
+## android-rl-cache
+
+### required
+```xml
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+### install
+```
+implementation 'org.ithot.android.business.cache.rlcache:rlcache:0.0.1'
+```
+
+### usage
+```java
+/* once */
+Rl.init(this);
+/* example */
+Rl.put("remoteKey", "localKey", false);
+Rl.get("remoteKey");
+Rl.get("remoteKey", new IRlGetter() {
+    @Override
+    public void get(String path) {
+
+    }
+});
+```
