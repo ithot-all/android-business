@@ -4,7 +4,7 @@
 ## AndroidHttp
 
 ### install
-```
+```gradle
 implementation 'org.ithot.android.serializer:gson:1.0.1'
 implementation 'org.ithot.android.business.transmit.http:httpc:0.0.1'
 ```
@@ -37,7 +37,7 @@ Req.create(this)
 ```
 
 ### install
-```
+```gradle
 implementation 'org.ithot.android.business.cache.rlcache:rlcache:0.0.1'
 ```
 
