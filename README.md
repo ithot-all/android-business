@@ -1,7 +1,7 @@
 # android-business
 :fire: A series of Android business type libraries
 
-## android-http
+## AndroidHttp
 
 ### install
 ```
@@ -27,7 +27,7 @@ Req.create(this)
     }).get();
 ```
 
-## android-rl-cache
+## AndroidRlCache
 
 ### required
 ```xml
