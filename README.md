@@ -4,7 +4,12 @@
 
 :fire: A series of Android business type libraries 
 
-## AndroidHttp
+## AndroidHTTP
+
+### required
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
 ### install
 ```gradle
