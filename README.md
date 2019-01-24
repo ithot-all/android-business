@@ -1,4 +1,4 @@
-# android-business
+# Android-Business
 
 [![Build Status](https://img.shields.io/travis/ithot-all/android-business/master.svg?style=flat-square)](https://travis-ci.org/ithot-all/android-business)
 
