@@ -1,5 +1,5 @@
 # android-business
-:fire: A series of Android business type libraries
+:fire: A series of Android business type libraries [![Build Status](https://img.shields.io/travis/ithot-all/android-business/master.svg?style=flat-square)](https://travis-ci.org/ithot-all/android-business)
 
 ## AndroidHttp
 
