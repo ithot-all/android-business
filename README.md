@@ -63,3 +63,44 @@ Rl.get("remoteKey", new IRlGetter() {
     }
 });
 ```
+## AndroidRegulator
+
+### install
+```gradle
+implementation 'org.ithot.android.business.regulator:core:0.0.1'
+```
+
+### usage
+```java
+/* example */
+Debouncer debouncer = new Debouncer(500);
+
+debouncer.setListener(new Debouncer.IDebouncer() {
+    @Override
+    public void perform(Object val) {
+        Log.e("perform", "Debouncer");
+    }
+});
+
+findViewById(R.id.btn_some).setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        debouncer.performAction();
+    }
+});
+Throttler<Integer> throttler = new Throttler<>();
+
+throttler.setListener(new Throttler.IThrottler<Integer>() {
+    @Override
+    public void perform(Integer val) {
+        Log.e("Throttle", val.intValue() + "");
+    }
+});
+SeekBar seekView = findViewById(R.id.seek);
+seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        throttler.performAction(progress);
+    }
+});
+```
