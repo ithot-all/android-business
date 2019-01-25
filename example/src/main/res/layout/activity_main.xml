@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_debouncer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Debouncer" />
+
+
+    <org.ithot.android.ui.slider.SliderView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/slider"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        app:slider_trackHeight="4dp" />
 
 </LinearLayout>
