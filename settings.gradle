@@ -1,1 +1,1 @@
-include ':http', ':example', ':rlcache', ':regulator'
+include ':http', ':example', ':rlcache', ':regulator', ':portal'

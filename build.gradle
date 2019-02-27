@@ -21,6 +21,7 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-tasks.getByPath(":regulator:bintrayUpload").enabled = true
+tasks.getByPath(":portal:bintrayUpload").enabled = true
+tasks.getByPath(":regulator:bintrayUpload").enabled = false
 tasks.getByPath(":rlcache:bintrayUpload").enabled = false
 tasks.getByPath(":http:bintrayUpload").enabled = false

@@ -104,3 +104,27 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     }
 });
 ```
+
+## AndroidPortal
+
+### required
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+### install
+```gradle
+implementation 'org.ithot.android.business.portal:portal:0.0.1'
+```
+
+### usage
+```java
+PortalDetector.launch(new IPortalResult() {
+    @Override
+    public void portal(boolean need) {
+        if (need){
+            // Open a browser and visit any website
+        }
+    }
+});
+```

@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 
 import org.ithot.android.business.cache.rlcache.Rl;
+import org.ithot.android.business.portal.IPortalResult;
+import org.ithot.android.business.portal.PortalDetector;
 import org.ithot.android.business.regulator.Debouncer;
 import org.ithot.android.business.regulator.Throttler;
 import org.ithot.android.business.transmit.http.core.Req;
@@ -70,6 +72,15 @@ public class MainActivity extends Activity {
             @Override
             public void move(float value) {
                 throttler.performAction(value);
+            }
+        });
+
+        PortalDetector.launch(new IPortalResult() {
+            @Override
+            public void portal(boolean need) {
+                if (need){
+                    // Open a browser and visit any website
+                }
             }
         });
     }
