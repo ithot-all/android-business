@@ -4,7 +4,7 @@ apply plugin: 'com.novoda.bintray-release'
 publish {
     userOrg = "dtboy"
     groupId = "org.ithot.android.business"
-    artifactId = "http"
+    artifactId = "http-s"
     publishVersion = "0.0.1"
     desc = "android http lib with cache policy"
     website = "https://github.com/ithot-all/android-business.git"
