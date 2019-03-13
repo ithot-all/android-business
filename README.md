@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/ithot-all/android-business/master.svg?style=flat-square)](https://travis-ci.org/ithot-all/android-business)
 
-:fire: A series of Android business type libraries 
+:fire: a series of android business type libraries 
 
 ## AndroidHTTP
 
