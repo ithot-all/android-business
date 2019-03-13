@@ -14,7 +14,7 @@
 ### install
 ```gradle
 implementation 'org.ithot.android.serializer:gson:1.0.1'
-implementation 'org.ithot.android.business.http:0.0.1'
+implementation 'org.ithot.android.business.http-s:0.0.1'
 ```
 
 ### usage
@@ -46,7 +46,7 @@ Req.create(this)
 
 ### install
 ```gradle
-implementation 'org.ithot.android.business:rlcache:0.0.1'
+implementation 'org.ithot.android.business:rl-cache:0.0.1'
 ```
 
 ### usage
@@ -67,7 +67,7 @@ Rl.get("remoteKey", new IRlGetter() {
 
 ### install
 ```gradle
-implementation 'org.ithot.android.business:regulator:0.0.1'
+implementation 'org.ithot.android.business:regulator-core:0.0.1'
 ```
 
 ### usage
@@ -114,7 +114,7 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
 ### install
 ```gradle
-implementation 'org.ithot.android.business:portal:0.0.1'
+implementation 'org.ithot.android.business:portal-detect:0.0.1'
 ```
 
 ### usage
