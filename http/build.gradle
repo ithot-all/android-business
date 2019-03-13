@@ -3,8 +3,8 @@ apply plugin: 'com.novoda.bintray-release'
 
 publish {
     userOrg = "dtboy"
-    groupId = "org.ithot.android.business.transmit.http"
-    artifactId = "httpc"
+    groupId = "org.ithot.android.business"
+    artifactId = "http"
     publishVersion = "0.0.1"
     desc = "android http lib with cache policy"
     website = "https://github.com/ithot-all/android-business.git"
@@ -25,6 +25,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    libraryVariants.all {
+        it.generateBuildConfig.enabled = false
     }
 
 }

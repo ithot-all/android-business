@@ -3,7 +3,7 @@ apply plugin: 'com.novoda.bintray-release'
 
 publish {
     userOrg = "dtboy"
-    groupId = "org.ithot.android.business.cache.rlcache"
+    groupId = "org.ithot.android.business"
     artifactId = "rlcache"
     publishVersion = "0.0.1"
     desc = "a library that associated remote files and local files"
@@ -24,6 +24,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    libraryVariants.all {
+        it.generateBuildConfig.enabled = false
     }
 
 }
