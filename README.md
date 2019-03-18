@@ -14,7 +14,7 @@
 ### install
 ```gradle
 implementation 'org.ithot.android.serializer:gson:1.0.1'
-implementation 'org.ithot.android.business.http-s:0.0.1'
+implementation 'org.ithot.android.business:http-s:0.0.1'
 ```
 
 ### usage
