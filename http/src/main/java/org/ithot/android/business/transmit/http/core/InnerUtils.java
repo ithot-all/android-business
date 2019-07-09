@@ -27,6 +27,7 @@ public class InnerUtils {
 
     static Map<String, String> arrToMap(Header[] headers) {
         Map<String, String> map = new HashMap<>();
+        if (headers == null) return map;
         for (int i = 0; i < headers.length; i++) {
             Header header = headers[i];
             map.put(header.getName(), header.getValue());
