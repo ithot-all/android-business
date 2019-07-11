@@ -18,8 +18,12 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.net.ssl.SSLContext;
+
 import cz.msebera.android.httpclient.Header;
 import cz.msebera.android.httpclient.HttpEntity;
+import cz.msebera.android.httpclient.conn.ssl.SSLConnectionSocketFactory;
+import cz.msebera.android.httpclient.conn.ssl.SSLSocketFactory;
 import cz.msebera.android.httpclient.entity.StringEntity;
 import cz.msebera.android.httpclient.message.BasicHeader;
 
@@ -50,7 +54,7 @@ public class Req {
         return SERIALIZER;
     }
 
-    static AsyncHttpClient client() {
+    public static AsyncHttpClient client() {
         return CLIENT;
     }
 
@@ -59,6 +63,11 @@ public class Req {
     }
 
     private static void lazy(Context context, JSONSerializer serializer) {
+        try {
+            CLIENT.setSSLSocketFactory(new SSLSocketFactory(SSLContext.getDefault(), SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         SERIALIZER = serializer;
         CacheSerializer<String> stringSerializer = new StringSerializer();
         CACHE = new Builder<String>("[android-http]", 1)

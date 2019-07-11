@@ -21,11 +21,12 @@ android {
 }
 
 dependencies {
-    implementation project(':http')
+//    implementation project(':http')
     implementation project(':rlcache')
     implementation project(':regulator')
     implementation project(':portal')
     implementation 'org.ithot.android.serializer:gson:1.0.1'
+    implementation 'org.ithot.android.business:http-s:0.0.2'
     // for test only
     implementation "org.ithot.android.ui:sliderview:0.0.1"
     implementation "org.ithot.android.ui:ui-inter:0.0.1"
